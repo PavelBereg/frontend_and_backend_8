@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revo Coffee - Bulma Edition</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Небольшая коррекция отступа, так как меню фиксированное -->
+    <style>
+        body { padding-top: 3.25rem; }
+    </style>
+</head>
+<body>
+
+    <!-- Классы Bulma: is-fixed-top (фиксирует), has-shadow (тень) -->
+    <nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item has-text-weight-bold is-size-4 has-text-primary" href="#">
+                    REVO COFFEE
+                </a>
+
+                <!-- Гамбургер для мобильных (визуальный) -->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="#hero" class="navbar-item">Главная</a>
+                    <a href="#about" class="navbar-item">О нас</a>
+                    <a href="#products" class="navbar-item">Каталог</a>
+                    <div class="navbar-item">
+                        <a class="button is-primary is-rounded">
+                            <strong>Корзина</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Классы: hero (секция), is-medium (высота), is-light (серый фон) -->
+    <section id="hero" class="hero is-medium is-light">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <p class="title is-1 is-spaced">
+                    ВАШ ПЕРСОНАЛЬНЫЙ КОФЕ
+                </p>
+                <p class="subtitle is-4">
+                    Отборные зерна, идеальная обжарка и доставка прямо к двери.
+                </p>
+                <div class="buttons is-centered">
+                    <a href="#products" class="button is-primary is-large is-rounded">
+                        Выбрать вкус
+                    </a>
+                    <a href="#about" class="button is-white is-large is-rounded">
+                        Узнать больше
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <!-- columns: включает сетку, is-vcentered: центрирует по вертикали -->
+            <div class="columns is-vcentered">
+                <div class="column is-6">
+                    <h2 class="title is-2">Искусство кофе</h2>
+                    <p class="subtitle has-text-grey">
+                        Мы не просто продаем кофе, мы создаем настроение. Каждая пачка Revo — это история путешествия зерна от плантации до вашей чашки.
+                    </p>
+                    <div class="content">
+                        <ul>
+                            <li><i class="fas fa-check has-text-primary p-1"></i> Прямой импорт</li>
+                            <li><i class="fas fa-check has-text-primary p-1"></i> Свежая обжарка</li>
+                            <li><i class="fas fa-check has-text-primary p-1"></i> Эко-упаковка</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <figure class="image is-4by3">
+                        <!-- Картинка с Unsplash (заглушка) -->
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c60e017bc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee" style="border-radius: 8px;">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="section has-background-white-ter">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered mb-6">Популярные сорта</h2>
+            
+            <div class="columns">
+                <!-- Карточка 1 -->
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Кофе 1">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4">Revo Morning</p>
+                            <p class="subtitle is-6 has-text-primary">Горький, бодрящий</p>
+                            <div class="content">
+                                Идеально для эспрессо. Заряд энергии на весь день.
+                            </div>
+                            <button class="button is-primary is-fullwidth is-outlined">Купить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Кофе 2">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4">Revo Everyday</p>
+                            <p class="subtitle is-6 has-text-primary">Сбалансированный</p>
+                            <div class="content">
+                                Мягкий вкус с нотками шоколада и орехов.
+                            </div>
+                            <button class="button is-primary is-fullwidth is-outlined">Купить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Кофе 3">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4">Revo Origin</p>
+                            <p class="subtitle is-6 has-text-primary">Фруктовый</p>
+                            <div class="content">
+                                Легкая кислинка и ягодное послевкусие.
+                            </div>
+                            <button class="button is-primary is-fullwidth is-outlined">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p>
+                <strong class="has-text-white">Revo Coffee</strong> by Student.
+                Сделано с помощью <a href="https://bulma.io" class="has-text-primary">Bulma CSS</a>.
+            </p>
+            <div class="buttons is-centered">
+                <a class="button is-dark is-rounded"><i class="fab fa-telegram"></i></a>
+                <a class="button is-dark is-rounded"><i class="fab fa-vk"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
