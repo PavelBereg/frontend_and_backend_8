@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revo Coffee - Bulma Edition</title>
+    <title>CodeStart | Курсы программирования</title>
     
+    <!-- 1. ПОДКЛЮЧЕНИЕ BULMA (CSS Фреймворк) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     
+    <!-- 2. ПОДКЛЮЧЕНИЕ ИКОНОК (Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Небольшая коррекция отступа, так как меню фиксированное -->
+    <!-- Небольшой отступ для фиксированного меню -->
     <style>
         body { padding-top: 3.25rem; }
+        .card { height: 100%; display: flex; flex-direction: column; }
+        .card-content { flex-grow: 1; }
     </style>
 </head>
 <body>
-
-    <!-- Классы Bulma: is-fixed-top (фиксирует), has-shadow (тень) -->
+    
     <nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item has-text-weight-bold is-size-4 has-text-primary" href="#">
-                    REVO COFFEE
+                <a class="navbar-item has-text-weight-bold is-size-4 has-text-link" href="#">
+                    <i class="fas fa-code mr-2"></i> CodeStart
                 </a>
 
-                <!-- Гамбургер для мобильных (визуальный) -->
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -34,143 +36,170 @@
 
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="#hero" class="navbar-item">Главная</a>
-                    <a href="#about" class="navbar-item">О нас</a>
-                    <a href="#products" class="navbar-item">Каталог</a>
+                    <a href="#courses" class="navbar-item">Курсы</a>
+                    <a href="#mentors" class="navbar-item">Менторы</a>
+                    <a href="#reviews" class="navbar-item">Отзывы</a>
                     <div class="navbar-item">
-                        <a class="button is-primary is-rounded">
-                            <strong>Корзина</strong>
-                        </a>
+                        <div class="buttons">
+                            <a class="button is-link is-outlined">Войти</a>
+                            <a class="button is-link">Начать бесплатно</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Классы: hero (секция), is-medium (высота), is-light (серый фон) -->
-    <section id="hero" class="hero is-medium is-light">
+    <!-- === 2. HERO-СЕКЦИЯ (Главный экран) === -->
+    <!-- is-link: синий фон, is-medium: средняя высота -->
+    <section class="hero is-link is-medium">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <p class="title is-1 is-spaced">
-                    ВАШ ПЕРСОНАЛЬНЫЙ КОФЕ
+                    Стань веб-разработчиком с нуля
                 </p>
                 <p class="subtitle is-4">
-                    Отборные зерна, идеальная обжарка и доставка прямо к двери.
+                    6 месяцев интенсивной практики. Код-ревью от экспертов. Гарантия трудоустройства или вернем деньги.
                 </p>
-                <div class="buttons is-centered">
-                    <a href="#products" class="button is-primary is-large is-rounded">
-                        Выбрать вкус
+                <div class="buttons is-centered mt-6">
+                    <a href="#courses" class="button is-white is-medium is-rounded has-text-link has-text-weight-bold">
+                        Выбрать профессию
                     </a>
-                    <a href="#about" class="button is-white is-large is-rounded">
-                        Узнать больше
+                    <a href="#" class="button is-link is-inverted is-outlined is-medium is-rounded">
+                        <span class="icon"><i class="fas fa-play"></i></span>
+                        <span>Как это работает</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section">
+    <section class="section">
         <div class="container">
-            <!-- columns: включает сетку, is-vcentered: центрирует по вертикали -->
-            <div class="columns is-vcentered">
-                <div class="column is-6">
-                    <h2 class="title is-2">Искусство кофе</h2>
-                    <p class="subtitle has-text-grey">
-                        Мы не просто продаем кофе, мы создаем настроение. Каждая пачка Revo — это история путешествия зерна от плантации до вашей чашки.
-                    </p>
-                    <div class="content">
-                        <ul>
-                            <li><i class="fas fa-check has-text-primary p-1"></i> Прямой импорт</li>
-                            <li><i class="fas fa-check has-text-primary p-1"></i> Свежая обжарка</li>
-                            <li><i class="fas fa-check has-text-primary p-1"></i> Эко-упаковка</li>
-                        </ul>
-                    </div>
+            <div class="columns has-text-centered is-vcentered">
+                <div class="column">
+                    <span class="icon is-large has-text-link mb-3">
+                        <i class="fas fa-laptop-code fa-3x"></i>
+                    </span>
+                    <h3 class="title is-4">Много практики</h3>
+                    <p class="subtitle is-6 has-text-grey">Вы напишете 10 реальных проектов для портфолио.</p>
                 </div>
-                <div class="column is-6">
-                    <figure class="image is-4by3">
-                        <!-- Картинка с Unsplash (заглушка) -->
-                        <img src="https://images.unsplash.com/photo-1447933601403-0c60e017bc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee" style="border-radius: 8px;">
-                    </figure>
+                <div class="column">
+                    <span class="icon is-large has-text-link mb-3">
+                        <i class="fas fa-user-graduate fa-3x"></i>
+                    </span>
+                    <h3 class="title is-4">Личный наставник</h3>
+                    <p class="subtitle is-6 has-text-grey">Разбор кода и ответы на вопросы 24/7.</p>
+                </div>
+                <div class="column">
+                    <span class="icon is-large has-text-link mb-3">
+                        <i class="fas fa-briefcase fa-3x"></i>
+                    </span>
+                    <h3 class="title is-4">Центр карьеры</h3>
+                    <p class="subtitle is-6 has-text-grey">Поможем составить резюме и пройти собеседование.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="products" class="section has-background-white-ter">
+    <section id="courses" class="section has-background-white-ter">
         <div class="container">
-            <h2 class="title is-2 has-text-centered mb-6">Популярные сорта</h2>
+            <h2 class="title is-2 has-text-centered mb-6">Популярные направления</h2>
             
             <div class="columns">
-                <!-- Карточка 1 -->
+                <!-- Курс 1: Python -->
                 <div class="column is-4">
                     <div class="card">
                         <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Кофе 1">
+                            <figure class="image is-2by1">
+                                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Python">
                             </figure>
                         </div>
                         <div class="card-content">
-                            <p class="title is-4">Revo Morning</p>
-                            <p class="subtitle is-6 has-text-primary">Горький, бодрящий</p>
-                            <div class="content">
-                                Идеально для эспрессо. Заряд энергии на весь день.
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Python-разработчик</p>
+                                    <span class="tag is-success is-light">Бэкенд</span>
+                                </div>
                             </div>
-                            <button class="button is-primary is-fullwidth is-outlined">Купить</button>
+                            <div class="content">
+                                Самый популярный язык для старта. Создавайте нейросети, телеграм-ботов и сайты.
+                                <br><br>
+                                <small class="has-text-grey"><i class="far fa-clock"></i> 8 месяцев</small>
+                            </div>
+                            <button class="button is-link is-fullwidth is-outlined mt-auto">Программа курса</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Карточка 2 -->
+                <!-- Курс 2: Frontend -->
                 <div class="column is-4">
                     <div class="card">
                         <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Кофе 2">
+                            <figure class="image is-2by1">
+                                <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Frontend">
                             </figure>
                         </div>
                         <div class="card-content">
-                            <p class="title is-4">Revo Everyday</p>
-                            <p class="subtitle is-6 has-text-primary">Сбалансированный</p>
-                            <div class="content">
-                                Мягкий вкус с нотками шоколада и орехов.
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Frontend (JS + React)</p>
+                                    <span class="tag is-warning is-light">Веб-дизайн</span>
+                                </div>
                             </div>
-                            <button class="button is-primary is-fullwidth is-outlined">Купить</button>
+                            <div class="content">
+                                Создавайте красивые и интерактивные интерфейсы. HTML, CSS, JavaScript и React.
+                                <br><br>
+                                <small class="has-text-grey"><i class="far fa-clock"></i> 6 месяцев</small>
+                            </div>
+                            <button class="button is-link is-fullwidth is-outlined mt-auto">Программа курса</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Карточка 3 -->
+                <!-- Курс 3: Java -->
                 <div class="column is-4">
                     <div class="card">
                         <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Кофе 3">
+                            <figure class="image is-2by1">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Java">
                             </figure>
                         </div>
                         <div class="card-content">
-                            <p class="title is-4">Revo Origin</p>
-                            <p class="subtitle is-6 has-text-primary">Фруктовый</p>
-                            <div class="content">
-                                Легкая кислинка и ягодное послевкусие.
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Java-разработчик</p>
+                                    <span class="tag is-danger is-light">Enterprise</span>
+                                </div>
                             </div>
-                            <button class="button is-primary is-fullwidth is-outlined">Купить</button>
+                            <div class="content">
+                                Язык крупных корпораций и банков. Надежность, безопасность и высокие зарплаты.
+                                <br><br>
+                                <small class="has-text-grey"><i class="far fa-clock"></i> 10 месяцев</small>
+                            </div>
+                            <button class="button is-link is-fullwidth is-outlined mt-auto">Программа курса</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <footer class="footer has-background-dark has-text-white">
         <div class="content has-text-centered">
+            <p class="is-size-5">
+                <i class="fas fa-code"></i> <strong>CodeStart</strong>
+            </p>
             <p>
-                <strong class="has-text-white">Revo Coffee</strong> by Student.
-                Сделано с помощью <a href="https://bulma.io" class="has-text-primary">Bulma CSS</a>.
+                Обучаем программированию с 2025 года.
             </p>
             <div class="buttons is-centered">
                 <a class="button is-dark is-rounded"><i class="fab fa-telegram"></i></a>
-                <a class="button is-dark is-rounded"><i class="fab fa-vk"></i></a>
+                <a class="button is-dark is-rounded"><i class="fab fa-youtube"></i></a>
+                <a class="button is-dark is-rounded"><i class="fab fa-github"></i></a>
             </div>
+            <p class="has-text-grey is-size-7">© 2025 CodeStart Inc. Все права защищены.</p>
         </div>
     </footer>
 
