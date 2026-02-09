@@ -4,14 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeStart | Курсы программирования</title>
-    
-    <!-- 1. ПОДКЛЮЧЕНИЕ BULMA (CSS Фреймворк) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    
-    <!-- 2. ПОДКЛЮЧЕНИЕ ИКОНОК (Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Небольшой отступ для фиксированного меню -->
     <style>
         body { padding-top: 3.25rem; }
         .card { height: 100%; display: flex; flex-direction: column; }
@@ -20,14 +14,13 @@
 </head>
 <body>
 
-    
+    <!-- ОБНОВЛЕННОЕ МЕНЮ -->
     <nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item has-text-weight-bold is-size-4 has-text-link" href="#">
+                <a class="navbar-item has-text-weight-bold is-size-4 has-text-link" href="index.html">
                     <i class="fas fa-code mr-2"></i> CodeStart
                 </a>
-
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
@@ -38,9 +31,11 @@
 
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="#courses" class="navbar-item">Курсы</a>
-                    <a href="#mentors" class="navbar-item">Менторы</a>
-                    <a href="#reviews" class="navbar-item">Отзывы</a>
+                    <!-- Класс is-active показывает, на какой мы странице -->
+                    <a href="index.html" class="navbar-item is-active">Главная</a>
+                    <a href="index.html#courses" class="navbar-item">Курсы</a>
+                    <a href="faq.html" class="navbar-item">FAQ</a>
+                    <a href="contacts.html" class="navbar-item">Контакты</a>
                     <div class="navbar-item">
                         <div class="buttons">
                             <a class="button is-link is-outlined">Войти</a>
@@ -52,8 +47,7 @@
         </div>
     </nav>
 
-    <!-- === 2. HERO-СЕКЦИЯ (Главный экран) === -->
-    <!-- is-link: синий фон, is-medium: средняя высота -->
+    <!-- HERO-СЕКЦИЯ -->
     <section class="hero is-link is-medium">
         <div class="hero-body">
             <div class="container has-text-centered">
@@ -76,6 +70,7 @@
         </div>
     </section>
 
+    <!-- ПРЕИМУЩЕСТВА -->
     <section class="section">
         <div class="container">
             <div class="columns has-text-centered is-vcentered">
@@ -104,6 +99,7 @@
         </div>
     </section>
 
+    <!-- КУРСЫ -->
     <section id="courses" class="section has-background-white-ter">
         <div class="container">
             <h2 class="title is-2 has-text-centered mb-6">Популярные направления</h2>
@@ -187,7 +183,7 @@
         </div>
     </section>
 
-
+    <!-- ФУТЕР -->
     <footer class="footer has-background-dark has-text-white">
         <div class="content has-text-centered">
             <p class="is-size-5">

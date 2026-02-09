@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | CodeStart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style> 
+        body { padding-top: 3.25rem; min-height: 100vh; display: flex; flex-direction: column; }
+        footer { margin-top: auto; }
+        /* Стиль для курсора и плюсика */
+        summary { cursor: pointer; outline: none; list-style: none; font-weight: bold; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; float: right; }
+        details[open] summary::after { content: '-'; }
+    </style>
+</head>
+<body>
+
+    <!-- ХЕДЕР (Активна вкладка FAQ) -->
+    <nav class="navbar is-fixed-top has-shadow">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item has-text-weight-bold is-size-4 has-text-link" href="index.html">
+                    <i class="fas fa-code mr-2"></i> CodeStart
+                </a>
+            </div>
+            <div class="navbar-menu is-active">
+                <div class="navbar-end">
+                    <a href="index.html" class="navbar-item">Главная</a>
+                    <a href="index.html#courses" class="navbar-item">Курсы</a>
+                    <a href="faq.html" class="navbar-item is-active">FAQ</a>
+                    <a href="contacts.html" class="navbar-item">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FAQ КОНТЕНТ -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h1 class="title is-2 has-text-centered mb-6">Частые вопросы</h1>
+
+            <div class="box">
+                <details>
+                    <summary class="has-text-link is-size-5">Нужен ли опыт для старта?</summary>
+                    <div class="mt-3 content">
+                        <p>Нет, наши курсы рассчитаны на новичков. Мы начинаем с самых основ HTML, CSS и логики программирования.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="box">
+                <details>
+                    <summary class="has-text-link is-size-5">Как проходит обучение?</summary>
+                    <div class="mt-3 content">
+                        <p>Вы смотрите видеолекции, выполняете домашние задания и отправляете их на проверку ментору.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="box">
+                <details>
+                    <summary class="has-text-link is-size-5">Вы помогаете с трудоустройством?</summary>
+                    <div class="mt-3 content">
+                        <p>Да! У нас есть Карьерный центр. Мы поможем составить резюме и подготовим к собеседованию.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p>© 2025 CodeStart Inc.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

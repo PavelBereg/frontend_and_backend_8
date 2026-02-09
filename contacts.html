@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | CodeStart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style> body { padding-top: 3.25rem; } </style>
+</head>
+<body>
+
+    <!-- ХЕДЕР (Активна вкладка Контакты) -->
+    <nav class="navbar is-fixed-top has-shadow">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item has-text-weight-bold is-size-4 has-text-link" href="index.html">
+                    <i class="fas fa-code mr-2"></i> CodeStart
+                </a>
+            </div>
+            <div class="navbar-menu is-active">
+                <div class="navbar-end">
+                    <a href="index.html" class="navbar-item">Главная</a>
+                    <a href="index.html#courses" class="navbar-item">Курсы</a>
+                    <a href="faq.html" class="navbar-item">FAQ</a>
+                    <a href="contacts.html" class="navbar-item is-active">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- КОНТЕНТ СТРАНИЦЫ КОНТАКТОВ -->
+    <section class="section">
+        <div class="container">
+            <h1 class="title is-2 has-text-centered mb-6">Свяжитесь с нами</h1>
+            
+            <div class="columns is-variable is-8">
+                <!-- Левая колонка: Форма -->
+                <div class="column is-6">
+                    <div class="box">
+                        <form action="#">
+                            <div class="field">
+                                <label class="label">Имя</label>
+                                <div class="control has-icons-left">
+                                    <input class="input" type="text" placeholder="Ваше имя" required>
+                                    <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control has-icons-left">
+                                    <input class="input" type="email" placeholder="hello@example.com" required>
+                                    <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Тема</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select>
+                                            <option>Запись на курс</option>
+                                            <option>Вопрос ментору</option>
+                                            <option>Другое</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Сообщение</label>
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="Напишите ваш вопрос..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" required>
+                                        Я согласен на обработку данных
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-link is-fullwidth">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: Информация -->
+                <div class="column is-6">
+                    <div class="content is-medium">
+                        <h3>Наши контакты</h3>
+                        <p>Мы всегда рады помочь вам с выбором курса или ответить на вопросы.</p>
+                        
+                        <ul style="list-style: none; margin-left: 0;">
+                            <li class="mb-4">
+                                <span class="icon has-text-link mr-2"><i class="fas fa-map-marker-alt"></i></span>
+                                Москва, ул. Цифровая, д. 10, оф. 404
+                            </li>
+                            <li class="mb-4">
+                                <span class="icon has-text-link mr-2"><i class="fas fa-phone"></i></span>
+                                +7 (999) 123-45-67
+                            </li>
+                            <li class="mb-4">
+                                <span class="icon has-text-link mr-2"><i class="fas fa-envelope"></i></span>
+                                support@codestart.ru
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p>© 2025 CodeStart Inc.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
